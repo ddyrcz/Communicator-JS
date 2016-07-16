@@ -1,0 +1,10 @@
+body{
+	padding:50px;
+}
+
+#messages{
+	width:500px;
+	height:250px;
+	overflow:auto;
+	background-color:#eee;
+} 		
