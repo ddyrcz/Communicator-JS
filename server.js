@@ -3,18 +3,27 @@ var http = require('http'),
 	mime = require('mime'),
 	path = require('path');
 
-var serveStaticFile = function(filePath, res){	
-	fs.readFile(filePath, (err, data) => {
-		if(err){
-			notFound(res);
-		}else{
-			sendFile(res, filePath, data);
-		}
-	});
+var cache = {};
+	
+var serveStaticFile = function(filePath, res){
+	if(cache[filePath]){
+		console.log('load from cache');
+		sendFile(res, filePath, cache[filePath]);
+	}else{
+		fs.readFile(filePath, (err, data) => {
+			if(err){
+				notFound(res);
+			}else{
+				cache[filePath] = data;
+				console.log('load file');
+				sendFile(res, filePath, data);
+			}
+		});
+	}
 }
 	
 var notFound = function(res){
-	res.statusCode = 404;
+	res.writeHead(404,{"content-type":"text/plain"});
 	res.end('404 not found');
 }
 
