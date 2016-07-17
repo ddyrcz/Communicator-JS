@@ -1,6 +1,6 @@
 var http = require('http'),	
 	util = require('util'),
-	staticFile = require('./lib/static'),
+	staticFile = require('./lib/static_file'),
 	chatServer = require('./lib/chat_server');
 
 var server = http.createServer(function(req, res){
