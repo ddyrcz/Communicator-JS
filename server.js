@@ -14,4 +14,6 @@ var server = http.createServer(function(req, res){
 
 chatServer.listen(server);
 
+console.log('Server is running');
+
 server.listen(1234);
