@@ -1,6 +1,7 @@
 var http = require('http'),	
 	util = require('util'),
-	staticFile = require('./lib/static');
+	staticFile = require('./lib/static'),
+	chatServer = require('./lib/chat_server');
 
 var server = http.createServer(function(req, res){
 	console.log(util.format('%s %s', req.method, req.url));	
@@ -10,5 +11,7 @@ var server = http.createServer(function(req, res){
 		staticFile.serveStaticFile(filePath, res);	
 	}
 });
+
+chatServer.listen(server);
 
 server.listen(1234);
