@@ -8,3 +8,7 @@ body{
 	overflow:auto;
 	background-color:#eee;
 } 		
+
+#myMessage{
+	text-align: right;
+}
