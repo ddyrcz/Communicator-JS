@@ -23,4 +23,4 @@ chatServer.listen(server);
 
 console.log('Server is running');
 
-server.listen(1234);
+server.listen(8000);

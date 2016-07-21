@@ -6,9 +6,11 @@ body{
 	width:500px;
 	height:250px;
 	overflow:auto;
-	background-color:#eee;
+	background-color:#ccc;
+	padding: 50px;
 } 		
 
 #myMessage{
-	text-align: right;
+	text-align: right;	
+	background-color:#eee;	
 }
