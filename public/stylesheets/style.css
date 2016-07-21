@@ -1,14 +1,33 @@
-body{
-	padding:50px;
+body{	
+	height: 100%;
+	width: 100%;
+	
 }
 
 #messages{
-	width:500px;
-	height:250px;
+	width:70%;
+	height:500px;
+	margin: auto;	
 	overflow:auto;
-	background-color:#ccc;
-	padding: 50px;
+	background-color:#ccc;		
 } 		
+
+#send-form{
+	margin:auto;	
+	width: 70%;	
+}
+
+#send-message{
+	width: 65%;
+	margin: auto;
+	float: left;
+	
+}
+
+#send-button{
+	width: 34%;
+	clear: both;	
+}
 
 #myMessage{
 	text-align: right;	
