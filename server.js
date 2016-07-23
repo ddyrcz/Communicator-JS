@@ -1,23 +1,23 @@
-var http = require('http'),	
-	util = require('util'),
+var http = require('http'),
 	staticFile = require('./lib/static_file'),
 	chatServer = require('./lib/chat_server');
 
 var server = http.createServer((req, res) => {
-	console.log(util.format('%s %s', req.method, req.url));	
-	
-	if(req.method === 'GET'){
-		
-		var filePath;
-		if(req.url === '/'){
-			filePath = 'public/index.html';
-		}else{
-			filePath = 'public' + req.url;	
-		}
-		
-		staticFile.serveStaticFile(filePath, res);	
+	console.log(`${req.method} ${req.url}`);
+
+	if (req.method === 'GET') {
+		var filePath = manageFilePath(req.url);
+		staticFile.serveStaticFile(filePath, res);
 	}
 });
+
+var manageFilePath = function (url) {
+	if (url === '/') {
+		return 'public/index.html';
+	} else {
+		return 'public' + req.url;
+	}
+}
 
 chatServer.listen(server);
 
