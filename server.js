@@ -15,7 +15,7 @@ var manageFilePath = function (url) {
 	if (url === '/') {
 		return 'public/index.html';
 	} else {
-		return 'public' + req.url;
+		return 'public' + url;
 	}
 }
 

@@ -4,12 +4,33 @@ body{
 	
 }
 
-#messages{
+#room{
 	width:70%;
+	margin: auto;
+}
+
+
+#center{
+	width: 70%;
+	margin: auto;
+}
+
+#messages{
+	width:80%;
 	height:500px;
 	margin: auto;	
 	overflow:auto;
-	background-color:#ccc;		
+	float: left;
+	background-color:#ccc;			
+}
+
+#room-list{
+	float: right;
+	width: 20%;
+	background-color: beige;	
+	height: 500px;
+	overflow: auto;
+	
 } 		
 
 #send-form{
@@ -20,8 +41,7 @@ body{
 #send-message{
 	width: 65%;
 	margin: auto;
-	float: left;
-	
+	float: left;	
 }
 
 #send-button{
