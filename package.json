@@ -1,5 +1,5 @@
 {
-  "name": "webcommunicator",
+  "name": "web-socket-communicator",
   "version": "0.5.0",
   "author": "ddyrcz",
   "main": "server.js",
